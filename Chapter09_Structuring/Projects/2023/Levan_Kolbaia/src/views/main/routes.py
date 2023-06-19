@@ -13,7 +13,7 @@ def nutrition():
     form = RegisterForm()
 
     if form.validate_on_submit():
-        new_user = User()
+        new_user = User(username=form.username.data, weight_input = form.goal.data)
         new_user.create()
 
     else:
